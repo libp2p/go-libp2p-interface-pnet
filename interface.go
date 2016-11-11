@@ -9,13 +9,15 @@ import (
 
 const envKey = "LIBP2P_FORCE_PNET"
 
-var ErrNotInPrivateNetwork = errors.New("private network was not configured")
+var ForcePrivateNetwork bool = false
+
+func init() {
+	ForcePrivateNetwork = os.Getenv(envKey) == "1"
+}
+
+var ErrNotInPrivateNetwork = errors.New("private network was not configured but" +
+	" is enforced by the environment")
 
 type Protector interface {
 	Protect(iconn.Conn) (iconn.Conn, error)
-}
-
-func ShouldForcePrivateNetwork() bool {
-	v := os.Getenv(envKey)
-	return v == "1"
 }
