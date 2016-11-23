@@ -1,4 +1,4 @@
-package pnet
+package ipnet
 
 import (
 	"errors"
@@ -26,5 +26,9 @@ var ErrNotInPrivateNetwork = errors.New("private network was not configured but"
 // libp2p. It is created by implementation and use by libp2p-conn to secure connections
 // so they can be only established with selected number of peers.
 type Protector interface {
+	// Wraps passed connection to protect it
 	Protect(iconn.Conn) (iconn.Conn, error)
+
+	// Returns key fingerprint that is safe to expose
+	Fingerprint() []byte
 }
