@@ -1,13 +1,14 @@
 package ipnet
 
 import (
-	"errors"
 	"os"
 
 	iconn "github.com/libp2p/go-libp2p-interface-conn"
 )
 
-const envKey = "LIBP2P_FORCE_PNET"
+// When environment variable of this name is set to "1" the ForcePrivateNetwork
+// variable will be set to true.
+const EnvKey = "LIBP2P_FORCE_PNET"
 
 // Setting this variable to true or setting LIBP2P_FORCE_PNET environment variable
 // to true will make libp2p to require private network protector.
@@ -16,10 +17,10 @@ const envKey = "LIBP2P_FORCE_PNET"
 var ForcePrivateNetwork bool = false
 
 func init() {
-	ForcePrivateNetwork = os.Getenv(envKey) == "1"
+	ForcePrivateNetwork = os.Getenv(EnvKey) == "1"
 }
 
-var ErrNotInPrivateNetwork = errors.New("private network was not configured but" +
+var ErrNotInPrivateNetwork = NewError("private network was not configured but" +
 	" is enforced by the environment")
 
 // This interface is a way for private network implementation to be transparent in
