@@ -3,7 +3,7 @@ package ipnet
 import (
 	"os"
 
-	iconn "github.com/libp2p/go-libp2p-interface-conn"
+	tconn "github.com/libp2p/go-libp2p-transport"
 )
 
 // EnvKey defines environment variable name for forcing usage of PNet in libp2p
@@ -32,7 +32,7 @@ var ErrNotInPrivateNetwork = NewError("private network was not configured but" +
 // so they can be only established with selected number of peers.
 type Protector interface {
 	// Wraps passed connection to protect it
-	Protect(iconn.Conn) (iconn.Conn, error)
+	Protect(tconn.Conn) (tconn.Conn, error)
 
 	// Returns key fingerprint that is safe to expose
 	Fingerprint() []byte
