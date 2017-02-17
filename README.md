@@ -5,7 +5,7 @@ go-libp2p-interface-pnet
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](http://libp2p.io/)
 [![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23ipfs)
 
-> A interface providing abstraction of swarm protection for libp2p.
+> An interface providing abstraction of swarm protection for libp2p.
 
 
 ## Table of Contents
