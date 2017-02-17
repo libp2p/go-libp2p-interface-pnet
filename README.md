@@ -1,4 +1,4 @@
-go-libp2p-conn
+go-libp2p-interface-pnet
 ==================
 
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
