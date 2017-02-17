@@ -10,7 +10,7 @@
   "gxDependencies": [
     {
       "author": "whyrusleeping",
-      "hash": "QmctX4TY6jXtpfeDiwMGoB4qVTBGDnz7T7r22CwQSzTgwt",
+      "hash": "QmcYnysCkyGezY6k6MQ1yHHdrRiZaU9x3M9Y1tE9qZ5hD2",
       "name": "go-libp2p-interface-conn",
       "version": "0.4.0"
     }
@@ -20,6 +20,6 @@
   "license": "MIT",
   "name": "go-libp2p-interface-pnet",
   "releaseCmd": "git commit -a -m \"gx publish $VERSION\"",
-  "version": "1.0.2"
+  "version": "2.0.0"
 }
 
