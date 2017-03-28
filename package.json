@@ -10,9 +10,9 @@
   "gxDependencies": [
     {
       "author": "whyrusleeping",
-      "hash": "QmcXRdAP5bCCm51X7XfDUrQ8Q9PsrKbU75pyvB18iuKob5",
-      "name": "go-libp2p-interface-conn",
-      "version": "0.4.7"
+      "hash": "QmPRK7UtNyvAxMt7J1Y1Nwi8ERm7e5Bcv31zRgmEe9xhmo",
+      "name": "go-libp2p-transport",
+      "version": "2.2.6"
     }
   ],
   "gxVersion": "0.9.1",
