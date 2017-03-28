@@ -10,9 +10,9 @@
   "gxDependencies": [
     {
       "author": "whyrusleeping",
-      "hash": "QmPRK7UtNyvAxMt7J1Y1Nwi8ERm7e5Bcv31zRgmEe9xhmo",
+      "hash": "QmSKoeo64CA54WNWqzVXHi5aT2LbgzP7B9VzQjW5yh7d4H",
       "name": "go-libp2p-transport",
-      "version": "2.2.6"
+      "version": "2.2.7"
     }
   ],
   "gxVersion": "0.9.1",
@@ -20,6 +20,6 @@
   "license": "MIT",
   "name": "go-libp2p-interface-pnet",
   "releaseCmd": "git commit -a -m \"gx publish $VERSION\"",
-  "version": "2.1.0"
+  "version": "2.1.1"
 }
 
