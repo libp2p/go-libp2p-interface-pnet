@@ -1,25 +1,31 @@
+// Deprecated: use github.com/libp2p/go-libp2p-core/pnet instead.
 package ipnet
 
-import moved "github.com/libp2p/go-libp2p-core/pnet"
+import core "github.com/libp2p/go-libp2p-core/pnet"
 
 // Deprecated: use github.com/libp2p/go-libp2p-core/pnet.EnvKey instead.
-const EnvKey = moved.EnvKey
+const EnvKey = core.EnvKey
 
-// Deprecated: it's not possible to alias this var, as it's copied by value.
-// Warning: it's not possible to alias variables in Go. Setting a value here may have no effect.
-var ForcePrivateNetwork = moved.ForcePrivateNetwork
+// Deprecated: use github.com/libp2p/go-libp2p-core/pnet.ForcePrivateNetwork instead.
+// Warning: it's impossible to alias a var in go. Writes to this var would have no longer
+// have any effect, so it has been commented out to induce breakage for added safety.
+// var ForcePrivateNetwork = core.ForcePrivateNetwork
 
 // Deprecated: use github.com/libp2p/go-libp2p-core/pnet.ErrNotInPrivateNetwork instead.
-var ErrNotInPrivateNetwork = moved.ErrNotInPrivateNetwork
+var ErrNotInPrivateNetwork = core.ErrNotInPrivateNetwork
 
 // Deprecated: use github.com/libp2p/go-libp2p-core/pnet.Protector instead.
-type Protector = moved.Protector
+type Protector = core.Protector
 
 // Deprecated: use github.com/libp2p/go-libp2p-core/pnet.Error instead.
-type PNetError = moved.Error
+type PNetError = core.Error
 
 // Deprecated: use github.com/libp2p/go-libp2p-core/pnet.NewError instead.
-var NewError = moved.NewError
+func NewError(err string) error {
+	return core.NewError(err)
+}
 
 // Deprecated: use github.com/libp2p/go-libp2p-core/pnet.IsPNetError instead.
-var IsPNetError = moved.IsPNetError
+func IsPNetError(err error) bool {
+	return core.IsPNetError(err)
+}
